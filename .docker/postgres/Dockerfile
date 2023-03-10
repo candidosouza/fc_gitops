@@ -1,5 +1,3 @@
-FROM postgres:12-alpine
-
-RUN apk add shadow
+FROM postgres:13
 
 RUN usermod -u 1000 postgres
