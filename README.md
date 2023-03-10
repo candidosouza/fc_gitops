@@ -1,2 +1,5 @@
-# fc_gitops
-Repositório curso Full Cycle 3.0 - GitOps
+# gitops
+
+## Repositório do curso Full Cycle 3.0
+
+GitOps
