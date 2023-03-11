@@ -4,7 +4,7 @@
 
 GitOps
 
-Install
+## Instalação
 
 ```
 git clone https://github.com/candidosouza/fc_gitops.git
@@ -21,3 +21,9 @@ mkdir .docker/pgdata
 ```
 docker-compose up
 ```
+
+## tecnologias utilizadas
+
+> Docker
+
+> Django
