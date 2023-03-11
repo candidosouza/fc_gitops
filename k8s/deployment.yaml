@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gitopsserver
+spec:
+  selector:
+    matchLabels:
+      app: gitopsserver
+  template:
+    metadata:
+      labels:
+        app: gitopsserver
+    spec:
+      containers:
+      - name: gitopsserver
+        image: gitopsserver
+        ports:
+        - containerPort: 8000

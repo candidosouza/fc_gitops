@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: gitopsserver-service
+spec:
+  selector:
+    app: gitopsserver
+  ports:
+  - port: 8000
+    targetPort: 8000

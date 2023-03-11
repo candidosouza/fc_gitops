@@ -18,3 +18,26 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: ${{ secrets.DOCKER_USERNAME }}/fc_gitops
           tags: ${{ github.sha }}, latest
+
+      - name: Setup kustomize.config.k8s.io/v1beta1
+        uses: imranismail/setup-kustomize@v1
+        with:
+          kustomize-version: "3.8.7"
+      
+      - name: Update Kubernets resources
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        run:  |
+          cd k8s
+          kustomize edit set image gitopsserver=$DOCKER_USERNAME/}/fc_gitops:$GITHUB_SHA
+
+      - name: Commit
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -am "Bump docker version"
+      - name: Push
+        uses: ad-m/github-push-action@main
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          repository: candidosouza/fc_gitops
