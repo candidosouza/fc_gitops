@@ -8,4 +8,4 @@ resources:
 images:
 - name: gitopsserver
   newName: candidosouza/}/fc_gitops
-  newTag: 9d2cb7a54e95f40da91deb5dc36cbc2578e43512
+  newTag: 658155f785101b2f5f89f965b56ac6346ad50f78
