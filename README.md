@@ -22,8 +22,14 @@ mkdir .docker/pgdata
 docker-compose up
 ```
 
-## tecnologias utilizadas
+## tecnologias e conceitos utilizadas
 
 > Docker
 
 > Django
+
+> CI/CD
+
+> Kubernetes
+
+> ArgoCD
